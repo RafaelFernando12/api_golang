@@ -18,15 +18,10 @@ func NewHandler(
 
 	router := gin.New()
 
-	// handler := &handler{
-	// 	log: log,
-	// }
-
-	router.RemoveExtraSlash = true
-	router.RedirectTrailingSlash = true
-
-	router.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "OK")
+	router.GET("/healthy", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"success": true,
+		})
 	})
 
 	return router.Handler()
