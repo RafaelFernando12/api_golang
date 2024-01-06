@@ -13,6 +13,8 @@ const (
 	DefaultPort        = "8080"
 	DefaultLoggerLevel = "DEBUG"
 	DefaultOrigin      = "*"
+
+	DbUrl = "DB_URL"
 )
 
 func GetEnv(args ...string) string {
